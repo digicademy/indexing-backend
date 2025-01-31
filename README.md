@@ -6,7 +6,17 @@ This a is Docker container for generating the indexes for a digital resource, ac
 
 ## Architecture
 
+### For the ```small size``` goal
 
+To have a small size of this container, the base image was choosen to be [busybox:latest](https://hub.docker.com/_/busybox), which is about 2MB in size. The [scratch](https://hub.docker.com/_/scratch) image, which is much smaller, was not used, due to the fact that the continuous integration in GitLab needs a container having a shell program.
+
+Also, the Rust modules were compiled with special flags, so that the executable size to be small.
+
+### For the ```speed``` goal
+
+In order to achieve a high speed of procesing, all components are developed in ```Rust``` language but one, which is developed in ```C``` language.
+
+??Also, all the components are united in a single ```Rust``` executable.
 
 ## Components
 
@@ -28,5 +38,14 @@ The container provides the following modules:
 
 ## Ideas
 
+* Maybe this [https://github.com/ballsteve/xrust](https://github.com/ballsteve/xrust) is a replacement for ```xsltproc```.
+
 * Include all the processing steps in a single Rust executable, called ```indexing-backend```.
 
+## Resources
+
+[https://github.com/phusion/baseimage-docker](https://github.com/phusion/baseimage-docker)
+
+[http://zderadicka.eu/static-build-of-rust-executables/](http://zderadicka.eu/static-build-of-rust-executables/)
+
+[https://github.com/rust-cross/rust-musl-cross](https://github.com/rust-cross/rust-musl-cross)
