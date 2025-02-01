@@ -1,11 +1,9 @@
 use reqwest::blocking::Client;
 use serde::{Deserialize, Serialize};
-use serde_json::Value;
 use serde_json::json;
+use serde_json::Value;
 
 const RISM_SEARCH_URL: &str = "https://rism.online/search?rows=100";
-
-
 
 fn main() {}
 
@@ -86,7 +84,8 @@ struct NextUrl {
 
 #[test]
 fn serde_json_test() {
-    let data = json!(r#"
+    let data = json!(
+        r#"
             {
             "id":"https://rism.online/search?mode=institutions",
             "type":"Collection",
@@ -159,28 +158,29 @@ fn serde_json_test() {
                 }
             ]
             }
-        "#);
+        "#
+    );
 
-   let institutions_data = 
+    // let institutions_data =
 
     // Parse the string of data into a Person object. This is exactly the
     // same function as the one that produced serde_json::Value above, but
     // now we are asking it for a Person as output.
-    let institutions_response: InstitutionsResponse = serde_json::from_str(data).expect("cannot parse json");
+    // let institutions_response: InstitutionsResponse = serde_json::from_str(data).expect("cannot parse json");
 
     // Do things just like with any other Rust data structure.
-    println!("{:?}", institutions_response);
+    // println!("{:?}", institutions_response);
 }
 
 #[test]
 fn test_1() {
-   let data = json!({
-      "x": {
-          "y": ["z", "zz"]
-      }
-  });
-  
-  println!("{:?}", data.pointer("/x/y").unwrap());
+    let data = json!({
+        "x": {
+            "y": ["z", "zz"]
+        }
+    });
+
+    println!("{:?}", data.pointer("/x/y").unwrap());
 }
 
 /*
