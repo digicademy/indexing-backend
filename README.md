@@ -2,13 +2,13 @@
 
 ## Scope
 
-This a is Docker container for generating the indexes for a digital resource, according to an indexing ontology. In order to provide fast generation of the indexes out of a digital resource, the goals of this container are: ```small size```, and ```speed```.
+This a is Docker container for generating the indexes for a digital resource, according to [an indexing ontology](https://claudius-teodorescu.gitlab.io/indexing-ontology/index-en.html). In order to provide fast generation of the indexes out of a digital resource, the goals of this container are: ```small size```, and ```speed```.
 
 ## Architecture
 
 ### For the ```small size``` goal
 
-To have a small size of this container, the base image was choosen to be [busybox:latest](https://hub.docker.com/_/busybox), which is about 2MB in size. The [scratch](https://hub.docker.com/_/scratch) image, which is much smaller, was not used, due to the fact that the continuous integration in GitLab needs a container having a shell program.
+To have a small size of this container, the base image was choosen to be [busybox:latest](https://hub.docker.com/_/busybox), which is about 2MB in size. The [scratch](https://hub.docker.com/_/scratch) image, which is much smaller, was not used, due to the fact that the continuous integration in GitLab needs a container having a Bourne shell program.
 
 Also, the Rust modules were compiled with special flags, so that the executable size to be small.
 
@@ -49,3 +49,7 @@ The container provides the following modules:
 [http://zderadicka.eu/static-build-of-rust-executables/](http://zderadicka.eu/static-build-of-rust-executables/)
 
 [https://github.com/rust-cross/rust-musl-cross](https://github.com/rust-cross/rust-musl-cross)
+
+[SlimToolkit](https://github.com/slimtoolkit/slim)
+
+[muslrust](https://github.com/clux/muslrust/tree/main)
