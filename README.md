@@ -53,3 +53,7 @@ The container provides the following modules:
 [SlimToolkit](https://github.com/slimtoolkit/slim)
 
 [muslrust](https://github.com/clux/muslrust/tree/main)
+
+[Using GitHub Actions to automatically update the repo's submodules](https://stackoverflow.com/questions/64407333/using-github-actions-to-automatically-update-the-repos-submodules)
+
+[Publishing and installing a package with GitHub Actions - GitHub Docs](https://docs.github.com/en/packages/managing-github-packages-using-github-actions-workflows/publishing-and-installing-a-package-with-github-actions#upgrading-a-workflow-that-accesses-a-registry-using-a-personal-access-token)
