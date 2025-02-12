@@ -29,5 +29,3 @@ FROM scratch
 COPY --from=builder /usr/local/cargo/bin/deciduously-com .
 USER 1000
 CMD ["./deciduously-com", "-a", "0.0.0.0", "-p", "8080"]
-
-# sudo docker run --publish 7001:7777 -a stderr tdrg:latest

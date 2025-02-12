@@ -59,3 +59,5 @@ The container provides the following modules:
 [Publishing and installing a package with GitHub Actions - GitHub Docs](https://docs.github.com/en/packages/managing-github-packages-using-github-actions-workflows/publishing-and-installing-a-package-with-github-actions#upgrading-a-workflow-that-accesses-a-registry-using-a-personal-access-token)
 
 [Speed up Gitlab CI, optimize your CI/CD workflow | Padok](https://cloud.theodo.com/en/blog/gitlab-ci-optimization)
+
+[Allow to run docker executors without a shell in the image](https://gitlab.com/gitlab-org/gitlab-runner/-/issues/26501)
