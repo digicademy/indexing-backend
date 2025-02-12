@@ -2,7 +2,11 @@
 
 ## Scope
 
-This a is Docker container for generating the indexes for a digital resource, according to [an indexing ontology](https://claudius-teodorescu.gitlab.io/indexing-ontology/index-en.html). In order to provide fast generation of the indexes out of a digital resource, the goals of this container are: ```small size```, and ```speed```.
+This a is Docker container for generating the indexes for a digital resource, according to [an indexing ontology](https://claudius-teodorescu.gitlab.io/indexing-ontology/index-en.html).
+
+Also, this module is used for generating a website for a digital edition, starting from a set of Semantic HTML templates, by using the module [rdfa-template-engine](https://gitlab.com/claudius-teodorescu/rdfa-template-engine).
+
+In order to provide fast generation of the indexes out of a digital resource, the goals of this container are: ```small size```, and ```speed```.
 
 ## Architecture
 
