@@ -5,7 +5,8 @@ LABEL maintainer="Claudius Teodorescu <claudius.teodorescu@gmail.com>"
 WORKDIR /usr/src/
 
 # Download the executables
-ADD https://gitlab.rlp.net/api/v4/projects/45837/packages/generic/rdf-data-aggregator/0.1.1/rdf-data-aggregator /usr/src/
+#ADD https://gitlab.rlp.net/api/v4/projects/45837/packages/generic/rdf-data-aggregator/0.1.1/rdf-data-aggregator /usr/src/
+COPY ./rdf-data-aggregator .
 
 RUN chmod +x rdf-data-aggregator
 

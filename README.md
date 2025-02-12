@@ -1,4 +1,4 @@
-# Indexing Backend
+# Static Publishing Backend
 
 ## Scope
 
